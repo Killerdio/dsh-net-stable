@@ -1,0 +1,44 @@
+{
+  "name": "dsh-net-stable",
+  "version": "0.2.0",
+  "description": "Stable web access for DeepSeek Harness: a resilient fetch provider with retries, proxy fallback and mirror routes, plus a net_doctor connectivity tool and a fetch journal.",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "test": "node test/run.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "bench": "node scripts/bench.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "web-fetch",
+    "resilience",
+    "retry",
+    "mirror"
+  ],
+  "license": "MIT"
+}

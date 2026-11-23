@@ -1,0 +1,19 @@
+# Applied after every shipped bundle layer, in profile bundle order.
+#
+# 1. Mount this plugin: a fetch provider (id `resilient`) and the `net_doctor` tool.
+# 2. Pin `fetchProvider` on the shipped `web` entry, because the seam refuses to
+#    choose between two usable fetch providers: without this pin, adding a second
+#    provider would make every web_fetch fail with WEB_PROVIDER_AMBIGUOUS.
+#    This override replaces the whole `web` config; the shipped layer sets only
+#    `fetchProvider: http`, so nothing else is dropped. To go back to the built-in
+#    direct fetch, delete the second entry (or pick another provider on the
+#    Plugins > Web search and fetch page, whose stored choice outranks this patch).
+- insert:
+    - id: net-stable
+      name: dsh-net-stable
+      config: {}
+
+- id: web
+  name: '@deepseek-ai/dsh-web'
+  config:
+    fetchProvider: resilient

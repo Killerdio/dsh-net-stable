@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "稳定上网",
+    "description": "抓取失败时自动重试、绕过代理直连、按镜像回退，并内置 net_doctor 网络诊断工具。",
+    "detail": "docs/DETAIL.md"
+  }
+}

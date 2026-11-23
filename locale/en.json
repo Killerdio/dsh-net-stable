@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Stable internet",
+    "description": "Retries failed fetches, falls back to a direct connection and mirror routes, and adds a net_doctor connectivity tool.",
+    "detail": "docs/DETAIL.md"
+  }
+}
